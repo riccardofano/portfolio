@@ -23,6 +23,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+
+  --clr-primary: #3edeb8;
 }
 
 *,
@@ -30,4 +32,15 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.btn {
+  font-size: 16px;
+  border: solid 1px var(--clr-primary);
+  padding: 0.3em 0.8em;
+  border-radius: 3px;
+
+  &--highlight {
+    background: var(--clr-primary);
+  }
 }

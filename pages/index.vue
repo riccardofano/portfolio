@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <h1>
-      <span>Sono Riccardo Fano</span>
+  <div class="hero">
+    <h1 class="hero__title">
+      <span class="hero__subtitle">Sono Riccardo Fano</span>
       Web Developer e Designer
     </h1>
-    <div>
-      <a>Scarica CV</a>
-      <a>Contattami</a>
+    <div class="hero__links">
+      <a class="btn">Scarica CV</a>
+      <a class="btn btn--highlight">Contattami</a>
     </div>
   </div>
 </template>
@@ -15,4 +15,4 @@
 export default {}
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
