@@ -58,6 +58,7 @@
 import SectionWrapper from '@/components/SectionWrapper.vue'
 
 export default {
+  name: 'TheRecentProjects',
   components: { SectionWrapper },
 }
 </script>

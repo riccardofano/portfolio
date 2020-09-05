@@ -28,6 +28,7 @@
 import SectionWrapper from '@/components/SectionWrapper.vue'
 
 export default {
+  name: 'TheAbout',
   components: { SectionWrapper },
 }
 </script>
