@@ -35,6 +35,7 @@ export default {
   &__header {
     font-size: 1.5rem;
     justify-self: start;
+    display: inline-block;
     margin-bottom: 1.5rem;
   }
 }
