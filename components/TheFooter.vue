@@ -5,11 +5,11 @@
       error temporibus expedita esse sed placeat eligendi. Ipsum, facilis ullam.
     </p>
     <div class="contact__info">
-      <h4 class="contact__category">Email:</h4>
+      <h3 class="contact__category">Email:</h3>
       <p class="contact__text">Lorem, ipsum dolor.</p>
     </div>
     <div class="contact__info">
-      <h4 class="contact__category">Telefono:</h4>
+      <h3 class="contact__category">Telefono:</h3>
       <p class="contact__text">Lorem, ipsum dolor.</p>
     </div>
   </section-wrapper>

@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <div class="hero__heading">
-      <h2 class="hero__subtitle">Sono Riccardo Fano</h2>
+      <p class="hero__subtitle">Sono Riccardo Fano</p>
       <h1 class="hero__title">
         <span class="underline">Web Developer e</span>
         <span class="underline">Designer</span>
