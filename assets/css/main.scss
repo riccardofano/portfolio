@@ -69,7 +69,6 @@ html {
 
 .grid {
   display: grid;
-  justify-items: start;
 
   &--outer {
     grid-template-columns: minmax(0, 2rem) 1fr minmax(0, 2rem);

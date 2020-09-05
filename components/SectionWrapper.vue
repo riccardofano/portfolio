@@ -29,11 +29,13 @@ export default {
   &--background {
     grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, 0.05);
+    width: 100vw;
   }
 
   &__header {
-    display: inline;
     font-size: 1.5rem;
+    justify-self: start;
+    margin-bottom: 1.5rem;
   }
 }
 </style>
