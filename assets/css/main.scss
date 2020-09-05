@@ -66,3 +66,15 @@ html {
     z-index: -1;
   }
 }
+
+.grid {
+  display: grid;
+
+  &--outer {
+    grid-template-columns: minmax(0, 2rem) 1fr minmax(0, 2rem);
+  }
+
+  &--inner {
+    grid-template-columns: 1fr 1rem 1fr;
+  }
+}
