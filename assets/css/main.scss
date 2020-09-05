@@ -69,12 +69,18 @@ html {
 
 .grid {
   display: grid;
+  justify-items: start;
 
   &--outer {
     grid-template-columns: minmax(0, 2rem) 1fr minmax(0, 2rem);
+
+    & > * {
+      grid-column: 2;
+    }
   }
 
   &--inner {
-    grid-template-columns: 1fr 1rem 1fr;
+    grid-template-columns: repeat(1fr, 2);
+    grid-gap: 1rem;
   }
 }
