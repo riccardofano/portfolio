@@ -1,14 +1,14 @@
 <template>
   <div class="grid grid--outer">
     <Nuxt />
-    <the-footer></the-footer>
+    <section-footer></section-footer>
   </div>
 </template>
 
 <script>
-import TheFooter from '@/components/TheFooter'
+import SectionFooter from '@/components/SectionFooter'
 
 export default {
-  components: { TheFooter },
+  components: { SectionFooter },
 }
 </script>

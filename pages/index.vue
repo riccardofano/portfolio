@@ -1,18 +1,18 @@
 <template>
   <fragment>
-    <the-hero></the-hero>
-    <the-recent-projects></the-recent-projects>
-    <the-about></the-about>
+    <section-hero></section-hero>
+    <section-recent-projects></section-recent-projects>
+    <section-about></section-about>
   </fragment>
 </template>
 
 <script>
-import TheHero from '@/components/TheHero.vue'
-import TheRecentProjects from '@/components/TheRecentProjects.vue'
-import TheAbout from '@/components/TheAbout.vue'
+import SectionHero from '@/components/SectionHero.vue'
+import SectionRecentProjects from '@/components/SectionRecentProjects.vue'
+import SectionAbout from '@/components/SectionAbout.vue'
 
 export default {
-  components: { TheHero, TheRecentProjects, TheAbout },
+  components: { SectionHero, SectionRecentProjects, SectionAbout },
 }
 </script>
 
