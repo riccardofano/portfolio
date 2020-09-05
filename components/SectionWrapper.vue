@@ -1,5 +1,9 @@
 <template>
-  <section v-if="background" class="section section--background">
+  <section
+    v-if="background"
+    class="section section--background"
+    :class="{ inverted }"
+  >
     <div class="grid grid--outer">
       <h2 class="section__header underline">{{ header }}</h2>
       <slot></slot>
@@ -16,6 +20,7 @@ export default {
   name: 'SectionWrapper',
   props: {
     background: { type: Boolean, required: false },
+    inverted: { type: Boolean, required: false },
     header: { type: String, required: true },
   },
 }
@@ -28,15 +33,24 @@ export default {
 
   &--background {
     grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--bg-secondary);
     width: 100vw;
+    z-index: -2;
+
+    &.inverted {
+      background: var(--clr-primary);
+
+      & .underline::after {
+        background: var(--bg-primary);
+      }
+    }
   }
 
   &__header {
     font-size: 1.5rem;
     justify-self: start;
     display: inline-block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 </style>
