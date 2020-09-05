@@ -1,7 +1,7 @@
 <template>
   <section-wrapper background header="Progetti recenti">
     <div class="project">
-      <picture class="project__picture">
+      <picture class="picture">
         <img src="https://via.placeholder.com/400x300" alt="" />
       </picture>
       <div class="project__info">
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="project">
-      <picture class="project__picture">
+      <picture class="picture">
         <img src="https://via.placeholder.com/400x300" alt="" />
       </picture>
       <div class="project__info">
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="project">
-      <picture class="project__picture">
+      <picture class="picture">
         <img src="https://via.placeholder.com/400x300" alt="" />
       </picture>
       <div class="project__info">
@@ -64,13 +64,6 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  &__picture img {
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-  }
-
   &__title {
     font-size: 1.25rem;
     font-weight: 600;
