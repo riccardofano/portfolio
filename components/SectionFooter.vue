@@ -19,7 +19,7 @@
 import SectionWrapper from '@/components/SectionWrapper.vue'
 
 export default {
-  name: 'TheFooter',
+  name: 'SectionFooter',
   components: { SectionWrapper },
 }
 </script>
