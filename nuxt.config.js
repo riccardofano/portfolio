@@ -50,7 +50,13 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
+  /*
+   ** Global scss resources
+   */
+  styleResources: {
+    scss: ['~/assets/css/mixins.scss'],
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
