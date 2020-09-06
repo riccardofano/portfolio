@@ -28,11 +28,15 @@ export default {
   &--background {
     grid-column: 1 / -1;
     background-color: var(--bg-secondary);
-    width: 100vw;
   }
 
   &--inverted {
     background-color: var(--clr-primary);
+    // The z-index here makes it so you can't select
+    // the inverted section's elements using the dev tools
+    // directly which is a bit of a pain
+    // but otherwise the underline won't show up
+    z-index: -2;
 
     & .underline::after {
       background-color: var(--bg-primary);
