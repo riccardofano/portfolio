@@ -1,6 +1,6 @@
 <template>
-  <section-wrapper header="Più su di me">
-    <div class="about">
+  <section-wrapper>
+    <h2 class="header underline">Più su di me</h2>
       <p class="about__description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum
         expedita quam! Veritatis blanditiis ex ipsa vel delectus, officia magni?

@@ -96,4 +96,10 @@ html {
   object-fit: cover;
   border-radius: 5px;
   box-shadow: var(--shadow);
+.header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  justify-self: start;
 }

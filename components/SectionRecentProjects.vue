@@ -1,5 +1,6 @@
 <template>
-  <section-wrapper background header="Progetti recenti">
+  <section-wrapper background>
+    <h2 class="header underline">Progetti recenti</h2>
     <div class="project">
       <picture class="picture">
         <img src="https://via.placeholder.com/400x300" alt="" />

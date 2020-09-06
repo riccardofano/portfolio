@@ -1,5 +1,6 @@
 <template>
-  <section-wrapper header="Contattami" background inverted>
+  <section-wrapper background inverted>
+    <h2 class="header underline">Contattami</h2>
     <p class="contact__description">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi inventore
       error temporibus expedita esse sed placeat eligendi. Ipsum, facilis ullam.
