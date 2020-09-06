@@ -29,7 +29,6 @@ export default {
     grid-column: 1 / -1;
     background-color: var(--bg-secondary);
     width: 100vw;
-    z-index: -2;
   }
 
   &--inverted {
