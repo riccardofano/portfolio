@@ -83,6 +83,13 @@ html {
     & > * {
       grid-column: 2;
     }
+    @include for-tablet-up {
+      grid-template-columns: 4rem 1fr 4rem;
+    }
+
+    @include for-big-desktop-up {
+      grid-template-columns: 1fr 1200px 1fr;
+    }
   }
 
   &--inner {
