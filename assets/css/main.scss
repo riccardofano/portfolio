@@ -53,8 +53,16 @@ html {
     background-color: var(--clr-primary);
   }
 
-  & + .btn {
+  + .btn {
     margin-left: 0.5rem;
+  }
+
+  @include for-tablet-up {
+    font-size: 18px;
+
+    + .btn {
+      margin-left: 1rem;
+    }
   }
 }
 

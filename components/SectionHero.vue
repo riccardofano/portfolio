@@ -22,17 +22,21 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
+  padding: 3rem 0;
   text-align: center;
   grid-column: 2;
 
   &__heading {
-    margin: 3rem 0;
+    margin-bottom: 3rem;
   }
 
   &__title {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__subtitle {
@@ -40,9 +44,29 @@ export default {
     display: block;
     font-weight: 400;
   }
+}
 
-  &__links {
-    margin-bottom: 4rem;
+@include for-tablet-up {
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@include for-desktop-up {
+  .hero {
+    padding: 4rem 0;
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
   }
 }
 </style>
