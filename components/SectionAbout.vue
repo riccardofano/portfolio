@@ -45,6 +45,10 @@ export default {
   &__picture img {
     margin-top: 1.5rem;
     box-shadow: none;
+
+    @include for-desktop-up {
+      margin-top: 0;
+    }
   }
 
   &__header {
