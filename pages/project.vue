@@ -9,6 +9,7 @@
     ></project-hero>
     <project-vision></project-vision>
     <project-tech></project-tech>
+    <project-gallery></project-gallery>
   </fragment>
 </template>
 
@@ -16,9 +17,10 @@
 import ProjectHero from '@/components/ProjectHero.vue'
 import ProjectVision from '@/components/ProjectVision.vue'
 import ProjectTech from '@/components/ProjectTech.vue'
+import ProjectGallery from '@/components/ProjectGallery.vue'
 
 export default {
-  components: { ProjectHero, ProjectVision, ProjectTech },
+  components: { ProjectHero, ProjectVision, ProjectTech, ProjectGallery },
 }
 </script>
 
