@@ -101,8 +101,11 @@ html {
   }
 
   &--inner {
-    grid-template-columns: repeat(1fr, 2);
-    grid-gap: 1rem;
+    @include for-desktop-up {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      align-items: center;
+    }
   }
 }
 
@@ -119,4 +122,17 @@ html {
   margin-bottom: 1.5rem;
   display: inline-block;
   justify-self: start;
+
+  @include for-tablet-up {
+    font-size: 1.75rem;
+  }
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+
+  @include for-tablet-up {
+    font-size: 1.1rem;
+  }
 }

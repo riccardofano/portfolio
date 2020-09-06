@@ -1,9 +1,10 @@
 <template>
   <section-wrapper background>
     <h2 class="header underline">Progetti recenti</h2>
-    <div class="project">
+
+    <div class="project grid grid--inner">
       <picture class="picture">
-        <img src="https://via.placeholder.com/400x300" alt="" />
+        <img src="https://via.placeholder.com/1600x900" alt="" />
       </picture>
       <div class="project__info">
         <h3 class="project__title">Piante e-commerce</h3>
@@ -12,15 +13,15 @@
           <span class="project__tag underline">Nextjs</span>
           <span class="project__tag underline">Stripe</span>
         </div>
-        <p class="project__description">
+        <p class="project__description paragraph">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima odio
           nemo atque alias voluptatum unde asperiores, ipsum error rerum sunt!
         </p>
       </div>
     </div>
-    <div class="project">
+    <div class="project grid grid--inner">
       <picture class="picture">
-        <img src="https://via.placeholder.com/400x300" alt="" />
+        <img src="https://via.placeholder.com/1600x900" alt="" />
       </picture>
       <div class="project__info">
         <h3 class="project__title">Piante e-commerce</h3>
@@ -29,15 +30,15 @@
           <span class="project__tag underline">Nextjs</span>
           <span class="project__tag underline">Stripe</span>
         </div>
-        <p class="project__description">
+        <p class="project__description paragraph">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima odio
           nemo atque alias voluptatum unde asperiores, ipsum error rerum sunt!
         </p>
       </div>
     </div>
-    <div class="project">
+    <div class="project grid grid--inner">
       <picture class="picture">
-        <img src="https://via.placeholder.com/400x300" alt="" />
+        <img src="https://via.placeholder.com/1600x900" alt="" />
       </picture>
       <div class="project__info">
         <h3 class="project__title">Piante e-commerce</h3>
@@ -46,7 +47,7 @@
           <span class="project__tag underline">Nextjs</span>
           <span class="project__tag underline">Stripe</span>
         </div>
-        <p class="project__description">
+        <p class="project__description paragraph">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima odio
           nemo atque alias voluptatum unde asperiores, ipsum error rerum sunt!
         </p>
@@ -90,6 +91,16 @@ export default {
 
   & + & {
     margin-top: 1.5rem;
+  }
+
+  @include for-tablet-up {
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__tag {
+      font-size: 1rem;
+    }
   }
 }
 </style>
