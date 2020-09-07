@@ -49,21 +49,46 @@ export default {
   text-align: center;
   grid-column: 1 / -1;
   background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: -2;
 
   &__title {
-    margin: 3rem 0;
+    margin-bottom: 3rem;
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  &__links {
-    margin-bottom: 4rem;
+  &__links a {
+    text-decoration: none;
+    color: var(--clr-text);
+  }
+}
 
-    & a {
-      text-decoration: none;
-      color: var(--clr-text);
+@include for-tablet-up {
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@include for-desktop-up {
+  .hero {
+    padding: 4rem;
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
     }
   }
 }
