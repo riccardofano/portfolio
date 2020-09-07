@@ -42,5 +42,9 @@ export default {
       background-color: var(--bg-primary);
     }
   }
+
+  @include for-tablet-up {
+    padding: 5rem 0;
+  }
 }
 </style>

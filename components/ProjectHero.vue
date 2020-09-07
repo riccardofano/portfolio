@@ -82,7 +82,7 @@ export default {
 
 @include for-desktop-up {
   .hero {
-    padding: 4rem;
+    padding: 5rem;
 
     &__title {
       font-size: 4rem;
