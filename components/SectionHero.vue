@@ -1,10 +1,10 @@
 <template>
   <div class="hero">
     <div class="hero__heading">
-      <p class="hero__subtitle">Sono Riccardo Fano</p>
+      <p class="hero__subtitle">{{ $t('hero.subtitle') }}</p>
       <h1 class="hero__title">
-        <span class="underline">Web Developer e</span>
-        <span class="underline">Designer</span>
+        <span class="underline">{{ $t('hero.firstLine') }}</span>
+        <span class="underline">{{ $t('hero.secondLine') }}</span>
       </h1>
     </div>
     <div class="hero__links">

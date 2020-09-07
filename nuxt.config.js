@@ -50,12 +50,32 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', 'nuxt-i18n'],
   /*
    ** Global scss resources
    */
   styleResources: {
     scss: ['~/assets/css/mixins.scss'],
+  },
+  /*
+   ** Nuxt internationalization settings
+   ** Doc: https://i18n.nuxtjs.org
+   */
+  i18n: {
+    locales: [
+      { code: 'en', file: 'en.js' },
+      { code: 'it', file: 'it.js' },
+    ],
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirect',
+    },
+    lazy: true,
+    langDir: 'locales/',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
   },
   /*
    ** Build configuration
