@@ -46,6 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
+  padding: 3rem 0;
   text-align: center;
   grid-column: 1 / -1;
   background-image: var(--hero-image);
