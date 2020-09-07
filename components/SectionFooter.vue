@@ -1,16 +1,14 @@
 <template>
   <section-wrapper background inverted>
-    <h2 class="header underline">Contattami</h2>
+    <h2 class="header underline">{{ $t('contact.title') }}</h2>
     <div class="grid grid--inner">
       <p class="contact__description paragraph">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
-        inventore error temporibus expedita esse sed placeat eligendi. Ipsum,
-        facilis ullam.
+        {{ $t('contact.shortDesc') }}
       </p>
       <div class="contact__info paragraph">
         <p class="contact__details">Email: <span>Lorem, ipsum dolor.</span></p>
         <p class="contact__details">
-          Telefono: <span>Lorem, ipsum dolor.</span>
+          {{ $t('contact.phone') }} <span>Lorem, ipsum dolor.</span>
         </p>
       </div>
     </div>

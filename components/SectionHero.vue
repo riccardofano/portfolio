@@ -8,8 +8,8 @@
       </h1>
     </div>
     <div class="hero__links">
-      <a class="btn">Scarica CV</a>
-      <a class="btn btn--highlight">Contattami</a>
+      <a class="btn">{{ $t('hero.btn') }}</a>
+      <a class="btn btn--highlight">{{ $t('hero.btnHighlight') }}</a>
     </div>
   </div>
 </template>

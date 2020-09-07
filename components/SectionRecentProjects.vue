@@ -1,6 +1,6 @@
 <template>
   <section-wrapper background>
-    <h2 class="header underline">Progetti recenti</h2>
+    <h2 class="header underline">{{ $t('recent') }}</h2>
 
     <div class="project grid grid--inner">
       <picture class="picture">

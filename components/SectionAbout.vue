@@ -1,25 +1,12 @@
 <template>
   <section-wrapper>
-    <h2 class="header underline">Più su di me</h2>
+    <h2 class="header underline">{{ $t('about.title') }}</h2>
     <div class="about grid grid--inner">
       <div class="about__info">
-        <p class="about__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum
-          expedita quam! Veritatis blanditiis ex ipsa vel delectus, officia
-          magni?
-        </p>
-        <h3 class="about__header">Strumenti e abilità</h3>
-        <p class="about__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa,
-          ullam unde fugiat quam corrupti maiores fugit iure illum dignissimos
-          architecto repudiandae. Fugit culpa alias, id adipisci quisquam
-          expedita! Amet.
-        </p>
-        <p class="about__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-          neque sequi enim, quaerat est veniam tempore dolore et ad eum quas
-          provident repellat dolorem eveniet?
-        </p>
+        <p class="about__description">{{ $t('about.shortDesc') }}</p>
+        <h3 class="about__header">{{ $t('about.subtitle') }}</h3>
+        <p class="about__description">{{ $t('about.devDesc') }}</p>
+        <p class="about__description">{{ $t('about.desDesc') }}</p>
       </div>
       <picture class="about__picture picture">
         <img src="https://via.placeholder.com/400x300" alt="" />
