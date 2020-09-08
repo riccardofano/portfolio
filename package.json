@@ -11,6 +11,10 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
     "nuxt": "^2.14.0",
     "nuxt-i18n": "^6.13.12",
     "vue-fragment": "^1.5.1"

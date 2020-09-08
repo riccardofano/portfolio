@@ -2,13 +2,7 @@
   <fragment>
     <section-wrapper>
       <h2 class="header underline">Visione del progetto</h2>
-      <p class="vision__description paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-        numquam. Beatae omnis dolor assumenda est repellat voluptatem, quasi vel
-        amet ratione nulla quisquam fuga perspiciatis molestias asperiores
-        fugiat eos cum minus quam culpa, libero sequi consequatur necessitatibus
-        rerum. Dolorem, cupiditate?
-      </p>
+      <p class="vision__description paragraph">{{ description }}</p>
     </section-wrapper>
   </fragment>
 </template>
@@ -19,6 +13,12 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 export default {
   name: 'ProjectVision',
   components: { SectionWrapper },
+  props: {
+    description: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 

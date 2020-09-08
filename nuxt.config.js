@@ -1,3 +1,10 @@
+import { request, gql } from './lib/datocms.js'
+const defaultLocale = 'en'
+const locales = [
+  { code: 'en', file: 'en.js' },
+  { code: 'it', file: 'it.js' },
+]
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -9,6 +16,42 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: 'static',
+  /*
+   ** Generate the dynamic pages from DatoCMS
+   */
+  generate: {
+    routes: async () => {
+      let routes = []
+      for (const locale of locales) {
+        const data = await request({
+          query: gql`
+            query AllProjects($lang: SiteLocale) {
+              allProjects(locale: $lang) {
+                slug
+                firstline
+                secondline
+                visiondescription
+                techdescription
+                challengesdescription
+              }
+            }
+          `,
+          variables: {
+            lang: locale.code,
+          },
+        })
+        routes = routes.concat(
+          data.allProjects.map((project) => ({
+            payload: project,
+            route: `${locale.code === defaultLocale ? '' : '/' + locale.code}/${
+              project.slug
+            }`,
+          }))
+        )
+      }
+      return routes
+    },
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -46,6 +89,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
@@ -62,11 +106,8 @@ export default {
    ** Doc: https://i18n.nuxtjs.org
    */
   i18n: {
-    locales: [
-      { code: 'en', file: 'en.js' },
-      { code: 'it', file: 'it.js' },
-    ],
-    defaultLocale: 'en',
+    locales,
+    defaultLocale,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirect',
