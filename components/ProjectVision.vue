@@ -2,7 +2,7 @@
   <fragment>
     <section-wrapper>
       <h2 class="header underline">Visione del progetto</h2>
-      <p class="vision__description paragraph">{{ description }}</p>
+      <p class="vision__description paragraph" v-html="description"></p>
     </section-wrapper>
   </fragment>
 </template>

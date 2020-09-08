@@ -7,29 +7,14 @@
       <div class="tech-wrapper">
         <div class="tech">
           <h2 class="header underline">Tecnologie usate</h2>
-          <p class="tech__description paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
-            ipsa totam laboriosam beatae eius! At eligendi dolorem vitae quam
-            aperiam, eaque expedita maxime cumque, similique quasi ab iste earum
-            laboriosam.
-          </p>
+          <div
+            class="tech__description paragraph"
+            v-html="techDescription"
+          ></div>
         </div>
         <div class="challenges">
           <h2 class="header underline clallenges__header">Sfide</h2>
-          <ul class="challenges__list paragraph">
-            <li class="challenges__list-item">
-              Lorem ipsum dolor sit, amet consectetur adipisicing.
-            </li>
-            <li class="challenges__list-item">
-              Lorem ipsum dolor sit, amet consectetur adipisicing.
-            </li>
-            <li class="challenges__list-item">
-              Lorem ipsum dolor sit, amet consectetur adipisicing.
-            </li>
-            <li class="challenges__list-item">
-              Lorem ipsum dolor sit, amet consectetur adipisicing.
-            </li>
-          </ul>
+          <div v-html="challengesDescription"></div>
         </div>
       </div>
     </div>
@@ -42,6 +27,17 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 export default {
   name: 'ProjectTech',
   components: { SectionWrapper },
+  props: {
+    descriptionTech: {
+      type: String,
+      required: true,
+    },
+    descriptionChallenges: {
+      type: String,
+      required: true,
+    },
+  },
+  mounted() {},
 }
 </script>
 

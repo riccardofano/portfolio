@@ -1,4 +1,6 @@
-import { request, gql } from './lib/datocms.js'
+import { request } from './lib/datocms.js'
+import { allProjects } from './lib/queries.js'
+
 const defaultLocale = 'en'
 const locales = [
   { code: 'en', file: 'en.js' },
@@ -23,23 +25,7 @@ export default {
     routes: async () => {
       let routes = []
       for (const locale of locales) {
-        const data = await request({
-          query: gql`
-            query AllProjects($lang: SiteLocale) {
-              allProjects(locale: $lang) {
-                slug
-                firstline
-                secondline
-                visiondescription
-                techdescription
-                challengesdescription
-              }
-            }
-          `,
-          variables: {
-            lang: locale.code,
-          },
-        })
+        const data = await request(allProjects(locale.code))
         routes = routes.concat(
           data.allProjects.map((project) => ({
             payload: project,
