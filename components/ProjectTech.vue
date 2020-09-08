@@ -9,12 +9,15 @@
           <h2 class="header underline">Tecnologie usate</h2>
           <div
             class="tech__description paragraph"
-            v-html="techDescription"
+            v-html="descriptionTech"
           ></div>
         </div>
         <div class="challenges">
           <h2 class="header underline clallenges__header">Sfide</h2>
-          <div v-html="challengesDescription"></div>
+          <div
+            class="challenges__description paragraph"
+            v-html="descriptionChallenges"
+          ></div>
         </div>
       </div>
     </div>
@@ -51,12 +54,13 @@ export default {
   }
 }
 
-.challenges__list {
-  list-style: circle;
-  font-weight: 600;
-  padding: 0 1rem 0;
+.challenges__description {
+  & ul {
+    list-style: circle;
+    padding: 0 1rem 0;
+  }
 
-  &-item {
+  & li {
     font-weight: 400;
   }
 }

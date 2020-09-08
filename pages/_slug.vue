@@ -1,16 +1,16 @@
 <template>
   <fragment>
     <project-hero
-      :first-line="project.lineFirst"
-      :second-line="project.lineSecond"
-      :repo-url="project.urlRepo"
-      :demo-url="project.urlDemo"
+      :first-line="lineFirst"
+      :second-line="lineSecond"
+      :repo-url="urlRepo"
+      :demo-url="urlDemo"
       image-url="https://via.placeholder.com/400x300"
     ></project-hero>
-    <project-vision :description="project.descriptionVision"></project-vision>
+    <project-vision :description="descriptionVision"></project-vision>
     <project-tech
-      :tech-description="project.descriptionTech"
-      :challenges-description="project.descriptionTechChallenges"
+      :description-tech="descriptionTech"
+      :description-challenges="descriptionChallenges"
     ></project-tech>
     <project-gallery></project-gallery>
   </fragment>
@@ -22,16 +22,27 @@ import ProjectVision from '@/components/ProjectVision.vue'
 import ProjectTech from '@/components/ProjectTech.vue'
 import ProjectGallery from '@/components/ProjectGallery.vue'
 
+import MarkdownIt from 'markdown-it'
 import { request } from '~/lib/datocms'
 import { singleProject } from '~/lib/queries'
+
+const md = new MarkdownIt()
 
 export default {
   components: { ProjectHero, ProjectVision, ProjectTech, ProjectGallery },
   async asyncData({ app, params, payload }) {
     if (payload) return { project: payload }
 
-    const data = await request(singleProject(app.i18n.locale, params.slug))
-    return { ...data }
+    const { project } = await request(
+      singleProject(app.i18n.locale, params.slug)
+    )
+
+    return {
+      ...project,
+      descriptionVision: md.render(project.descriptionVision),
+      descriptionTech: md.render(project.descriptionTech),
+      descriptionChallenges: md.render(project.descriptionChallenges),
+    }
   },
 }
 </script>

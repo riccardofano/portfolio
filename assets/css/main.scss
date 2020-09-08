@@ -136,3 +136,10 @@ html {
     font-size: 1.1rem;
   }
 }
+
+// You can't use scoped style when using v-html
+// and I need that to use the markdown I get from the cms
+ul {
+  list-style: circle;
+  padding: 0 1rem 0;
+}

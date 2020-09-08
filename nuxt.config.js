@@ -28,7 +28,12 @@ export default {
         const data = await request(allProjects(locale.code))
         routes = routes.concat(
           data.allProjects.map((project) => ({
-            payload: project,
+            payload: {
+              ...project,
+              descriptionVision: md.render(project.descriptionVision),
+              descriptionTech: md.render(project.descriptionTech),
+              descriptionChallenges: md.render(project.descriptionChallenges),
+            },
             route: `${locale.code === defaultLocale ? '' : '/' + locale.code}/${
               project.slug
             }`,
