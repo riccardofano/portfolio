@@ -1,11 +1,11 @@
 <template>
   <fragment>
     <project-hero
-      :first-line="lineFirst"
-      :second-line="lineSecond"
-      :repo-url="urlRepo"
-      :demo-url="urlDemo"
-      image-url="https://via.placeholder.com/400x300"
+      :line-first="lineFirst"
+      :line-second="lineSecond"
+      :url-repo="urlRepo"
+      :url-demo="urlDemo"
+      url-image="https://via.placeholder.com/400x300"
     ></project-hero>
     <project-vision :description="descriptionVision"></project-vision>
     <project-tech
@@ -31,7 +31,7 @@ const md = new MarkdownIt()
 export default {
   components: { ProjectHero, ProjectVision, ProjectTech, ProjectGallery },
   async asyncData({ app, params, payload }) {
-    if (payload) return { project: payload }
+    if (payload) return { ...payload }
 
     const { project } = await request(
       singleProject(app.i18n.locale, params.slug)

@@ -1,17 +1,13 @@
 <template>
-  <div class="hero grid grid--outer">
-    <style>
-      :root {
-        --hero-image: url('{{imageUrl}}');
-      }
-    </style>
+  <div class="hero">
+    <img class="hero__image" :src="urlImage" alt="" />
     <h1 class="hero__title">
-      <span class="underline">{{ firstLine }}</span>
-      <span class="underline">{{ secondLine }}</span>
+      <span class="underline">{{ lineFirst }}</span>
+      <span class="underline">{{ lineSecond }}</span>
     </h1>
     <div class="hero__links">
-      <a class="btn" :href="repoUrl">Github</a>
-      <a class="btn btn--highlight" :href="demoUrl">Versione live</a>
+      <a class="btn" :href="urlRepo">Github</a>
+      <a class="btn btn--highlight" :href="urlDemo">Versione live</a>
     </div>
   </div>
 </template>
@@ -20,39 +16,34 @@
 export default {
   name: 'ProjectHero',
   props: {
-    firstLine: {
-      type: String,
-      required: true,
-    },
-    secondLine: {
-      type: String,
-      required: true,
-    },
-    repoUrl: {
-      type: String,
-      required: true,
-    },
-    demoUrl: {
-      type: String,
-      required: true,
-    },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
+    lineFirst: { type: String, required: true },
+    lineSecond: { type: String, required: true },
+    urlRepo: { type: String, required: true },
+    urlDemo: { type: String, required: true },
+    urlImage: { type: String, required: true },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .hero {
+  position: relative;
   padding: 3rem 0;
   text-align: center;
   grid-column: 1 / -1;
-  background-image: var(--hero-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
+
+  &__image {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
 
   &__title {
     margin-bottom: 3rem;
@@ -82,7 +73,7 @@ export default {
 
 @include for-desktop-up {
   .hero {
-    padding: 5rem;
+    padding: 5rem 0;
 
     &__title {
       font-size: 4rem;
