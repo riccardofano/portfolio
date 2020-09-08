@@ -1,5 +1,8 @@
+import MarkdownIt from 'markdown-it'
 import { request } from './lib/datocms.js'
 import { allProjects } from './lib/queries.js'
+
+const md = new MarkdownIt()
 
 const defaultLocale = 'en'
 const locales = [
