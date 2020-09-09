@@ -5,7 +5,7 @@
       :line-second="lineSecond"
       :url-repo="urlRepo"
       :url-demo="urlDemo"
-      url-image="https://via.placeholder.com/400x300"
+      :image="imageHero"
     ></project-hero>
     <project-vision :description="descriptionVision"></project-vision>
     <project-tech
@@ -31,6 +31,7 @@ const md = new MarkdownIt()
 export default {
   components: { ProjectHero, ProjectVision, ProjectTech, ProjectGallery },
   async asyncData({ app, params, payload }) {
+    console.log(payload)
     if (payload) return { ...payload }
 
     const { project } = await request(

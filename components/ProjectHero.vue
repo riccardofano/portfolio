@@ -1,6 +1,8 @@
 <template>
   <div class="hero">
-    <img class="hero__image" :src="urlImage" alt="" />
+    <div class="hero__image">
+      <datocms-image :data="image.responsiveImage"></datocms-image>
+    </div>
     <h1 class="hero__title">
       <span class="underline">{{ lineFirst }}</span>
       <span class="underline">{{ lineSecond }}</span>
@@ -20,10 +22,27 @@ export default {
     lineSecond: { type: String, required: true },
     urlRepo: { type: String, required: true },
     urlDemo: { type: String, required: true },
-    urlImage: { type: String, required: true },
+    image: { type: Object, required: true },
   },
 }
 </script>
+
+<style lang="scss">
+.hero__image div {
+  & svg,
+  & div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  & picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 .hero {
@@ -32,8 +51,8 @@ export default {
   text-align: center;
   grid-column: 1 / -1;
 
-  &__image {
-    content: '';
+  &__image,
+  &__image div {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -41,8 +60,13 @@ export default {
     right: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     z-index: -2;
+  }
+  &__image div picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   &__title {
