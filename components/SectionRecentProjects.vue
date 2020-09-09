@@ -17,14 +17,15 @@
           <div class="project__tags">
             <span
               v-for="tag in project.tags"
-              :key="tag"
+              :key="tag.text"
               class="project__tag underline"
               >{{ tag.text }}</span
             >
           </div>
-          <p class="project__description paragraph">
-            {{ project.descriptionVision }}
-          </p>
+          <div
+            class="project__description paragraph"
+            v-html="mdDescription(project.descriptionVision)"
+          ></div>
         </div>
       </div>
     </div>
@@ -34,6 +35,9 @@
 <script>
 import SectionWrapper from '@/components/SectionWrapper.vue'
 
+import MarkdownIt from 'markdown-it'
+const md = new MarkdownIt()
+
 export default {
   name: 'SectionRecentProjects',
   components: { SectionWrapper },
@@ -41,6 +45,12 @@ export default {
     projects: {
       type: Array,
       required: true,
+    },
+  },
+  methods: {
+    mdDescription(description) {
+      console.log(description)
+      return md.render(description)
     },
   },
 }
