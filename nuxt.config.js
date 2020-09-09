@@ -71,7 +71,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ['@/plugins/vue-fragment.js', '@/plugins/datocms-image.js'],
+  plugins: ['@/plugins/datocms-image.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components

@@ -1,10 +1,8 @@
 <template>
-  <fragment>
-    <section-wrapper>
-      <h2 class="header underline">Visione del progetto</h2>
-      <div class="vision__description paragraph" v-html="description"></div>
-    </section-wrapper>
-  </fragment>
+  <section-wrapper>
+    <h2 class="header underline">Visione del progetto</h2>
+    <div class="vision__description paragraph" v-html="description"></div>
+  </section-wrapper>
 </template>
 
 <script>

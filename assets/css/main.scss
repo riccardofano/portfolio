@@ -88,9 +88,6 @@ html {
   &--outer {
     grid-template-columns: minmax(0, 2rem) 1fr minmax(0, 2rem);
 
-    & > * {
-      grid-column: 2;
-    }
     @include for-tablet-up {
       grid-template-columns: 4rem 1fr 4rem;
     }
@@ -107,6 +104,14 @@ html {
       align-items: center;
     }
   }
+}
+
+.column--all {
+  grid-column: 1 / -1;
+}
+
+.column--middle {
+  grid-column: 2;
 }
 
 .picture img {

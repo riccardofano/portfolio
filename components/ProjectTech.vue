@@ -1,6 +1,6 @@
 <template>
   <section-wrapper background>
-    <div class="grid grid--inner">
+    <div class="wrapper grid grid--inner column--middle">
       <picture class="tech__picture picture">
         <img src="https://via.placeholder.com/1600x900" alt="" />
       </picture>
@@ -40,7 +40,6 @@ export default {
       required: true,
     },
   },
-  mounted() {},
 }
 </script>
 
@@ -51,17 +50,6 @@ export default {
   &__picture img {
     box-shadow: none;
     justify-self: center;
-  }
-}
-
-.challenges__description {
-  & ul {
-    list-style: circle;
-    padding: 0 1rem 0;
-  }
-
-  & li {
-    font-weight: 400;
   }
 }
 

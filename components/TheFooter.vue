@@ -1,15 +1,19 @@
 <template>
   <section-wrapper background inverted>
-    <h2 class="header underline">{{ $t('contact.title') }}</h2>
-    <div class="grid grid--inner">
-      <p class="contact__description paragraph">
-        {{ $t('contact.shortDesc') }}
-      </p>
-      <div class="contact__info paragraph">
-        <p class="contact__details">Email: <span>Lorem, ipsum dolor.</span></p>
-        <p class="contact__details">
-          {{ $t('contact.phone') }} <span>Lorem, ipsum dolor.</span>
+    <div class="column--middle">
+      <h2 class="header underline">{{ $t('contact.title') }}</h2>
+      <div class="grid grid--inner">
+        <p class="contact__description paragraph">
+          {{ $t('contact.shortDesc') }}
         </p>
+        <div class="contact__info paragraph">
+          <p class="contact__details">
+            Email: <span>Lorem, ipsum dolor.</span>
+          </p>
+          <p class="contact__details">
+            {{ $t('contact.phone') }} <span>Lorem, ipsum dolor.</span>
+          </p>
+        </div>
       </div>
     </div>
   </section-wrapper>

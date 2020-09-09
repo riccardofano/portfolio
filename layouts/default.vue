@@ -1,14 +1,7 @@
 <template>
-  <div class="grid grid--outer">
-    <Nuxt />
-    <section-footer></section-footer>
-  </div>
+  <Nuxt />
 </template>
 
 <script>
-import SectionFooter from '@/components/SectionFooter'
-
-export default {
-  components: { SectionFooter },
-}
+export default {}
 </script>

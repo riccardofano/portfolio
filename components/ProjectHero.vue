@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero column--all">
     <div class="hero__image">
       <datocms-image :data="image.responsiveImage"></datocms-image>
     </div>
@@ -49,7 +49,6 @@ export default {
   position: relative;
   padding: 3rem 0;
   text-align: center;
-  grid-column: 1 / -1;
 
   &__image,
   &__image div {

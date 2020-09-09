@@ -1,5 +1,5 @@
 <template>
-  <fragment>
+  <div class="grid grid--outer">
     <project-hero
       :line-first="lineFirst"
       :line-second="lineSecond"
@@ -13,7 +13,8 @@
       :description-challenges="descriptionChallenges"
     ></project-tech>
     <project-gallery></project-gallery>
-  </fragment>
+    <the-footer></the-footer>
+  </div>
 </template>
 
 <script>
@@ -21,6 +22,7 @@ import ProjectHero from '@/components/ProjectHero.vue'
 import ProjectVision from '@/components/ProjectVision.vue'
 import ProjectTech from '@/components/ProjectTech.vue'
 import ProjectGallery from '@/components/ProjectGallery.vue'
+import TheFooter from '@/components/TheFooter.vue'
 
 import MarkdownIt from 'markdown-it'
 import { request } from '~/lib/datocms'
@@ -29,9 +31,14 @@ import { singleProject } from '~/lib/queries'
 const md = new MarkdownIt()
 
 export default {
-  components: { ProjectHero, ProjectVision, ProjectTech, ProjectGallery },
+  components: {
+    ProjectHero,
+    ProjectVision,
+    ProjectTech,
+    ProjectGallery,
+    TheFooter,
+  },
   async asyncData({ app, params, payload }) {
-    console.log(payload)
     if (payload) return { ...payload }
 
     const { project } = await request(
