@@ -13,7 +13,7 @@
       :description-challenges="descriptionChallenges"
       :image="imageTech"
     ></project-tech>
-    <project-gallery></project-gallery>
+    <project-gallery :images="imageGallery"></project-gallery>
     <the-footer></the-footer>
   </div>
 </template>

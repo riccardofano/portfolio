@@ -1,22 +1,10 @@
 <template>
   <section-wrapper>
     <h2 class="header underline">Galleria Immagini</h2>
-    <div class="gallery-wrapper grid grid--inner">
-      <picture class="gallery__picture picture">
-        <img src="https://via.placeholder.com/1600x900" alt="" />
-      </picture>
-      <picture class="gallery__picture picture">
-        <img src="https://via.placeholder.com/1600x900" alt="" />
-      </picture>
-      <picture class="gallery__picture picture">
-        <img src="https://via.placeholder.com/1600x900" alt="" />
-      </picture>
-      <picture class="gallery__picture picture">
-        <img src="https://via.placeholder.com/1600x900" alt="" />
-      </picture>
-      <picture class="gallery__picture picture">
-        <img src="https://via.placeholder.com/1600x900" alt="" />
-      </picture>
+    <div class="gallery grid grid--inner">
+      <div v-for="(image, i) in images" :key="i" class="gallery__image">
+        <datocms-image :data="image.responsiveImage"></datocms-image>
+      </div>
     </div>
   </section-wrapper>
 </template>
@@ -27,11 +15,17 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 export default {
   name: 'ProjectGallery',
   components: { SectionWrapper },
+  props: {
+    images: {
+      type: Array,
+      required: true,
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.gallery-wrapper {
+.gallery {
   grid-row-gap: 1rem;
 
   @include for-desktop-up {
