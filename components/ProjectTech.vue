@@ -1,9 +1,9 @@
 <template>
   <section-wrapper background>
     <div class="wrapper grid grid--inner column--middle">
-      <picture class="tech__picture picture">
-        <img src="https://via.placeholder.com/1600x900" alt="" />
-      </picture>
+      <div class="tech__image">
+        <datocms-image :data="image.responsiveImage"></datocms-image>
+      </div>
       <div class="tech-wrapper">
         <div class="tech">
           <h2 class="header underline">Tecnologie usate</h2>
@@ -39,29 +39,39 @@ export default {
       type: String,
       required: true,
     },
+    image: {
+      type: Object,
+      required: true,
+    },
   },
 }
 </script>
 
+<style lang="scss">
+.tech__image img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+</style>
+
 <style lang="scss" scoped>
 .tech {
   margin-bottom: 1.5rem;
-
-  &__picture img {
-    box-shadow: none;
-    justify-self: center;
-  }
 }
 
 @include for-desktop-up {
-  .tech__picture {
+  .tech__image {
     grid-column: 2;
     grid-row: 1;
+    justify-self: center;
+    align-self: center;
   }
 
   .tech-wrapper {
     grid-column: 1;
     grid-row: 1;
+    align-self: start;
   }
 }
 </style>

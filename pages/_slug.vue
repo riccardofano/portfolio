@@ -11,6 +11,7 @@
     <project-tech
       :description-tech="descriptionTech"
       :description-challenges="descriptionChallenges"
+      :image="imageTech"
     ></project-tech>
     <project-gallery></project-gallery>
     <the-footer></the-footer>
