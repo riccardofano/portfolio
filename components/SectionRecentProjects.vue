@@ -49,7 +49,6 @@ export default {
   },
   methods: {
     mdDescription(description) {
-      console.log(description)
       return md.render(description)
     },
   },
