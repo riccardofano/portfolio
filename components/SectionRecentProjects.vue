@@ -2,58 +2,28 @@
   <section-wrapper background>
     <div class="column--middle">
       <h2 class="header underline">{{ $t('recent') }}</h2>
-
-      <div class="project grid grid--inner">
-        <picture class="picture">
-          <img src="https://via.placeholder.com/1600x900" alt="" />
-        </picture>
-        <div class="project__info">
-          <h3 class="project__title">Piante e-commerce</h3>
-          <div class="project__tags">
-            <span class="project__tag underline">Reactjs</span>
-            <span class="project__tag underline">Nextjs</span>
-            <span class="project__tag underline">Stripe</span>
-          </div>
-          <p class="project__description paragraph">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
-            odio nemo atque alias voluptatum unde asperiores, ipsum error rerum
-            sunt!
-          </p>
+      <div
+        v-for="(project, i) in projects"
+        :key="i"
+        class="project grid grid--inner"
+      >
+        <div class="picture">
+          <datocms-image
+            :data="project.imageThumbnail.responsiveImage"
+          ></datocms-image>
         </div>
-      </div>
-      <div class="project grid grid--inner">
-        <picture class="picture">
-          <img src="https://via.placeholder.com/1600x900" alt="" />
-        </picture>
         <div class="project__info">
-          <h3 class="project__title">Piante e-commerce</h3>
+          <h3 class="project__title">{{ project.title }}</h3>
           <div class="project__tags">
-            <span class="project__tag underline">Reactjs</span>
-            <span class="project__tag underline">Nextjs</span>
-            <span class="project__tag underline">Stripe</span>
+            <span
+              v-for="tag in project.tags"
+              :key="tag"
+              class="project__tag underline"
+              >{{ tag.text }}</span
+            >
           </div>
           <p class="project__description paragraph">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
-            odio nemo atque alias voluptatum unde asperiores, ipsum error rerum
-            sunt!
-          </p>
-        </div>
-      </div>
-      <div class="project grid grid--inner">
-        <picture class="picture">
-          <img src="https://via.placeholder.com/1600x900" alt="" />
-        </picture>
-        <div class="project__info">
-          <h3 class="project__title">Piante e-commerce</h3>
-          <div class="project__tags">
-            <span class="project__tag underline">Reactjs</span>
-            <span class="project__tag underline">Nextjs</span>
-            <span class="project__tag underline">Stripe</span>
-          </div>
-          <p class="project__description paragraph">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
-            odio nemo atque alias voluptatum unde asperiores, ipsum error rerum
-            sunt!
+            {{ project.descriptionVision }}
           </p>
         </div>
       </div>
@@ -67,6 +37,12 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 export default {
   name: 'SectionRecentProjects',
   components: { SectionWrapper },
+  props: {
+    projects: {
+      type: Array,
+      required: true,
+    },
+  },
 }
 </script>
 
