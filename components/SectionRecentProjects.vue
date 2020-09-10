@@ -10,12 +10,17 @@
         <div class="project__picture picture">
           <datocms-image :data="project.imageThumbnail.responsiveImage">
           </datocms-image>
-          <a href="#" class="project__btn btn btn--highlight">
+          <nuxt-link
+            :to="localePath(`/${project.slug}`)"
+            class="project__btn btn btn--highlight"
+          >
             {{ $t('recent.btn') }}
-          </a>
+          </nuxt-link>
         </div>
         <div class="project__info">
-          <h3 class="project__title">{{ project.title }}</h3>
+          <nuxt-link :to="localePath(`/${project.slug}`)">
+            <h3 class="project__title">{{ project.title }}</h3>
+          </nuxt-link>
           <div class="project__tags">
             <span
               v-for="tag in project.tags"
@@ -58,11 +63,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+}
+
 .project {
   &__title {
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0.75rem 0;
+    color: var(--clr-text);
+    text-decoration: none;
   }
 
   &__picture {

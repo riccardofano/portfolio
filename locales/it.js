@@ -4,7 +4,7 @@ export default {
     secondLine: 'e Designer.',
     subtitle: 'Sono Riccardo Fano',
     btn: 'Scarica CV',
-    btnHighligh: 'Contattami',
+    btnHighlight: 'Contattami',
   },
   navbar: {
     language: 'English',
