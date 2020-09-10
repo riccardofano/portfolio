@@ -19,8 +19,8 @@
               v-for="tag in project.tags"
               :key="tag.text"
               class="project__tag underline"
-              >{{ tag.text }}</span
-            >
+              >{{ tag.text }}
+            </span>
           </div>
           <div
             class="project__description paragraph"
