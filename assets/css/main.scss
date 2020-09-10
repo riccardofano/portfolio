@@ -16,8 +16,10 @@
 
 :root {
   --clr-primary: #3edeb8;
+  --clr-primary-hover: #0fe9a2;
   --clr-text: #000;
   --bg-primary: #fff;
+  --bg-primary-hover: #f0f0f0;
   --bg-secondary: rgba(0, 0, 0, 0.05);
   --underline-overflow: -0.2em;
   --shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
@@ -42,15 +44,29 @@ html {
 }
 
 .btn {
-  font-size: 16px;
-  border: solid 1px var(--clr-primary);
-  background-color: var(--bg-primary);
+  display: inline-block;
   padding: 0.3em 0.8em;
   border-radius: 3px;
+  border: solid 1px var(--clr-primary);
+  background-color: var(--bg-primary);
+  color: var(--clr-text);
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 200ms ease-in-out, padding 100ms ease-in;
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-primary-hover);
+  }
 
   &--highlight {
     background-color: var(--clr-primary);
+
+    &:hover {
+      background-color: var(--clr-primary-hover);
+      border-color: var(--clr-primary-hover);
+    }
   }
 
   + .btn {
@@ -118,6 +134,7 @@ html {
 .picture > div {
   box-shadow: var(--shadow);
   border-radius: 5px;
+  transition: filter 200ms ease-in-out;
 }
 
 .picture img {

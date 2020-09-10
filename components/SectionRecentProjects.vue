@@ -1,16 +1,18 @@
 <template>
   <section-wrapper background>
     <div class="column--middle">
-      <h2 class="header underline">{{ $t('recent') }}</h2>
+      <h2 class="header underline">{{ $t('recent.title') }}</h2>
       <div
         v-for="(project, i) in projects"
         :key="i"
         class="project grid grid--inner"
       >
-        <div class="picture">
-          <datocms-image
-            :data="project.imageThumbnail.responsiveImage"
-          ></datocms-image>
+        <div class="project__picture picture">
+          <datocms-image :data="project.imageThumbnail.responsiveImage">
+          </datocms-image>
+          <a href="#" class="project__btn btn btn--highlight">
+            {{ $t('recent.btn') }}
+          </a>
         </div>
         <div class="project__info">
           <h3 class="project__title">{{ project.title }}</h3>
@@ -61,6 +63,44 @@ export default {
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0.75rem 0;
+  }
+
+  &__picture {
+    position: relative;
+  }
+
+  &__btn {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__picture {
+    // Using the `::after` pseudo element because the background
+    // doesn't seem to show up on a datocms-image div
+    > div::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgb(0, 0, 0);
+      opacity: 0;
+      transition: opacity 200ms ease-in-out;
+    }
+
+    &:hover {
+      > div::after {
+        opacity: 0.5;
+      }
+
+      .project__btn {
+        opacity: 1;
+      }
+    }
   }
 
   &__tags {

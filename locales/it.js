@@ -6,7 +6,10 @@ export default {
     btn: 'Scarica CV',
     btnHighligh: 'Contattami',
   },
-  recent: 'Progetti recenti',
+  recent: {
+    title: 'Progetti recenti',
+    btn: 'Vedi più dettagli',
+  },
   about: {
     title: 'Più su di me',
     shortDesc:

@@ -6,7 +6,10 @@ export default {
     btn: 'Download CV',
     btnHighlight: 'Contact me',
   },
-  recent: 'Recent Projects',
+  recent: {
+    title: 'Recent Projects',
+    btn: 'See more details',
+  },
   about: {
     title: 'More about me',
     shortDesc:
