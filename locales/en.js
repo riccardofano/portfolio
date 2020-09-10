@@ -6,6 +6,9 @@ export default {
     btn: 'Download CV',
     btnHighlight: 'Contact me',
   },
+  navbar: {
+    language: 'Italiano',
+  },
   recent: {
     title: 'Recent Projects',
     btn: 'See more details',

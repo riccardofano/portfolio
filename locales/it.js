@@ -6,6 +6,9 @@ export default {
     btn: 'Scarica CV',
     btnHighligh: 'Contattami',
   },
+  navbar: {
+    language: 'English',
+  },
   recent: {
     title: 'Progetti recenti',
     btn: 'Vedi più dettagli',

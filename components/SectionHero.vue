@@ -1,5 +1,6 @@
 <template>
-  <div class="hero">
+  <div class="hero column--middle">
+    <the-navbar></the-navbar>
     <div class="hero__heading">
       <p class="hero__subtitle">{{ $t('hero.subtitle') }}</p>
       <h1 class="hero__title">
@@ -15,16 +16,18 @@
 </template>
 
 <script>
+import TheNavbar from '@/components/TheNavbar'
+
 export default {
   name: 'SectionHero',
+  components: { TheNavbar },
 }
 </script>
 
 <style lang="scss" scoped>
 .hero {
-  padding: 3rem 0;
+  padding: 2rem 0 3rem;
   text-align: center;
-  grid-column: 2;
 
   &__heading {
     margin-bottom: 3rem;
@@ -58,7 +61,7 @@ export default {
 
 @include for-desktop-up {
   .hero {
-    padding: 5rem 0;
+    padding: 3rem 0 5rem;
 
     &__title {
       font-size: 4rem;
