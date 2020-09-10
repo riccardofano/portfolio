@@ -1,5 +1,8 @@
 <template>
   <div class="hero column--all">
+    <div class="grid grid--outer">
+      <the-navbar class="column--middle"></the-navbar>
+    </div>
     <div class="hero__image">
       <datocms-image :data="image.responsiveImage"></datocms-image>
     </div>
@@ -15,8 +18,11 @@
 </template>
 
 <script>
+import TheNavbar from '@/components/TheNavbar.vue'
+
 export default {
   name: 'ProjectHero',
+  components: { TheNavbar },
   props: {
     lineFirst: { type: String, required: true },
     lineSecond: { type: String, required: true },
@@ -47,7 +53,7 @@ export default {
 <style lang="scss" scoped>
 .hero {
   position: relative;
-  padding: 3rem 0;
+  padding: 2rem 0 3rem;
   text-align: center;
 
   &__image,
@@ -96,7 +102,7 @@ export default {
 
 @include for-desktop-up {
   .hero {
-    padding: 5rem 0;
+    padding: 3rem 0 5rem;
 
     &__title {
       font-size: 4rem;

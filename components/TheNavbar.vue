@@ -46,10 +46,10 @@ export default {
     border-radius: 5px;
     color: var(--clr-text);
     // Always have a border so it doesn't shift around on hover
-    border: 1px solid var(--bg-primary);
+    border: 1px solid transparent;
 
     &:hover {
-      background-color: var(--bg-primary);
+      background-color: rgba(255, 255, 255, 0.3);
       border-color: var(--clr-primary);
     }
 
