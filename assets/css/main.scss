@@ -20,7 +20,7 @@
   --bg-primary: #fff;
   --bg-secondary: rgba(0, 0, 0, 0.05);
   --underline-overflow: -0.2em;
-  --shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.2);
+  --shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 html {
@@ -114,11 +114,16 @@ html {
   grid-column: 2;
 }
 
+// Datocms image container
+.picture > div {
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+}
+
 .picture img {
+  border-radius: 5px;
   max-width: 100%;
   object-fit: cover;
-  border-radius: 5px;
-  box-shadow: var(--shadow);
 }
 
 .header {
