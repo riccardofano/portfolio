@@ -50,7 +50,7 @@ html {
   border: solid 1px var(--clr-primary);
   background-color: var(--bg-primary);
   color: var(--clr-text);
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   text-align: center;
   transition: opacity 200ms ease-in-out, padding 100ms ease-in;
@@ -74,7 +74,7 @@ html {
   }
 
   @include for-tablet-up {
-    font-size: 18px;
+    font-size: 1.125rem;
 
     + .btn {
       margin-left: 1rem;
