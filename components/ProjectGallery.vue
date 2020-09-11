@@ -2,7 +2,11 @@
   <section-wrapper>
     <h2 class="header underline">Galleria Immagini</h2>
     <div class="gallery grid grid--inner">
-      <div v-for="(image, i) in images" :key="i" class="picture">
+      <div
+        v-for="(image, i) in images"
+        :key="i"
+        class="picture picture--shadow"
+      >
         <datocms-image :data="image.responsiveImage"></datocms-image>
       </div>
     </div>
