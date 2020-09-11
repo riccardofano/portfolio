@@ -1,5 +1,5 @@
 <template>
-  <navbar class="navbar column--middle">
+  <nav class="navbar column--middle">
     <!-- Placeholder for a logo -->
     <nuxt-link class="navbar__item navbar__text" :to="localePath('/')">
       Home
@@ -11,7 +11,7 @@
       <IconifyIcon :icon="languageIcon" class="navbar__icon" />
       <div class="navbar__text">{{ $t('navbar.language') }}</div>
     </nuxt-link>
-  </navbar>
+  </nav>
 </template>
 
 <script>
