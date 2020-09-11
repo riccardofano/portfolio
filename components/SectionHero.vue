@@ -10,7 +10,9 @@
     </div>
     <div class="hero__links">
       <a class="btn">{{ $t('hero.btn') }}</a>
-      <a class="btn btn--highlight">{{ $t('hero.btnHighlight') }}</a>
+      <a :href="`mailto:${emailAddress}`" class="btn btn--highlight">
+        {{ $t('hero.btnHighlight') }}
+      </a>
     </div>
   </div>
 </template>
@@ -21,6 +23,9 @@ import TheNavbar from '@/components/TheNavbar'
 export default {
   name: 'SectionHero',
   components: { TheNavbar },
+  data: () => ({
+    emailAddress: process.env.EMAIL_ADDRESS,
+  }),
 }
 </script>
 
