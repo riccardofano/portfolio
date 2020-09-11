@@ -8,11 +8,20 @@
         </p>
         <div class="contact__info paragraph">
           <p class="contact__details">
-            Email: <span>Lorem, ipsum dolor.</span>
+            {{ $t('contact.phone') }} <span>{{ phoneNumber }}</span>
           </p>
-          <p class="contact__details">
-            {{ $t('contact.phone') }} <span>Lorem, ipsum dolor.</span>
-          </p>
+          <a
+            class="contact__details underline"
+            :href="`mailto:${emailAddress}`"
+          >
+            Email: <span>{{ emailAddress }}</span>
+          </a>
+          <a
+            class="contact__details underline"
+            :href="`https://github.com/${github}`"
+          >
+            Github: <span>{{ github }}</span>
+          </a>
         </div>
       </div>
     </div>
@@ -25,6 +34,11 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 export default {
   name: 'SectionFooter',
   components: { SectionWrapper },
+  data: () => ({
+    emailAddress: process.env.EMAIL_ADDRESS,
+    phoneNumber: process.env.PHONE_NUMBER,
+    github: process.env.GITHUB,
+  }),
 }
 </script>
 
@@ -32,6 +46,9 @@ export default {
 .contact {
   &__info {
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     @include for-desktop-up {
       margin-top: 0;
@@ -47,6 +64,8 @@ export default {
   &__details {
     font-weight: 600;
     margin-right: 1rem;
+    text-decoration: none;
+    color: var(--clr-text);
 
     & span {
       font-weight: 400;
