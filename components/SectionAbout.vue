@@ -8,9 +8,9 @@
         <p class="about__description">{{ $t('about.devDesc') }}</p>
         <p class="about__description">{{ $t('about.desDesc') }}</p>
       </div>
-      <picture class="about__picture picture">
-        <img src="https://via.placeholder.com/400x300" alt="" />
-      </picture>
+      <div class="about__picture picture">
+        <datocms-image :data="image.responsiveImage"></datocms-image>
+      </div>
     </div>
   </section-wrapper>
 </template>
@@ -21,6 +21,12 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 export default {
   name: 'SectionAbout',
   components: { SectionWrapper },
+  props: {
+    image: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 
