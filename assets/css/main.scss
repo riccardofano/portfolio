@@ -130,17 +130,22 @@ html {
   grid-column: 2;
 }
 
-// Datocms image container
-.picture > div {
-  box-shadow: var(--shadow);
+.picture {
+  // display: flex, inline-flex, grid, or inline-grid
+  // remove the spacing under the content a normal div has
+  display: flex;
   border-radius: 5px;
-  transition: filter 200ms ease-in-out;
-}
+  // to make sure the border radius to its contents
+  overflow: hidden;
 
-.picture img {
-  border-radius: 5px;
-  max-width: 100%;
-  object-fit: cover;
+  &--shadow {
+    box-shadow: var(--shadow);
+  }
+
+  & img {
+    max-width: 100%;
+    object-fit: cover;
+  }
 }
 
 .header {

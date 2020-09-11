@@ -7,7 +7,7 @@
         :key="i"
         class="project grid grid--inner"
       >
-        <div class="project__picture picture">
+        <div class="project__picture picture picture--shadow">
           <datocms-image :data="project.imageThumbnail.responsiveImage">
           </datocms-image>
           <nuxt-link
@@ -62,6 +62,19 @@ export default {
 }
 </script>
 
+<style lang="scss">
+.project__picture {
+  & img {
+    transition: blur 500ms ease-in, transform 200ms ease-in-out;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+    filter: blur(5px);
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 a {
   text-decoration: none;
@@ -76,38 +89,31 @@ a {
     text-decoration: none;
   }
 
+  &__btn {
+    position: absolute;
+    z-index: 1;
+    align-self: center;
+    opacity: 0;
+  }
+
   &__picture {
     position: relative;
-  }
+    justify-content: center;
 
-  &__btn {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__picture {
-    // Using the `::after` pseudo element because the background
-    // doesn't seem to show up on a datocms-image div
-    > div::after {
+    &::after {
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: rgb(0, 0, 0);
       opacity: 0;
+      background-color: rgba(0, 0, 0, 0.1);
       transition: opacity 200ms ease-in-out;
     }
 
     &:hover {
-      > div::after {
-        opacity: 0.5;
-      }
-
+      &::after,
       .project__btn {
         opacity: 1;
       }
@@ -137,6 +143,10 @@ a {
   @include for-tablet-up {
     &__title {
       font-size: 1.5rem;
+    }
+
+    &__btn {
+      transform: scale(1.2);
     }
 
     &__tag {
