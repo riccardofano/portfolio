@@ -1,8 +1,8 @@
 <template>
   <section-wrapper>
-    <h2 class="header underline">{{ $t('about.title') }}</h2>
     <div class="about grid grid--inner">
       <div class="about__info">
+        <h2 class="header underline">{{ $t('about.title') }}</h2>
         <p class="about__description">{{ $t('about.shortDesc') }}</p>
         <h3 class="about__header">{{ $t('about.subtitle') }}</h3>
         <p class="about__description">{{ $t('about.devDesc') }}</p>
