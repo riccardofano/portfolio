@@ -64,6 +64,10 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
+   ** Disable the loading bar at the top of the page
+   */
+  loading: false,
+  /*
    ** Global CSS
    */
   css: ['~/assets/css/main.scss'],

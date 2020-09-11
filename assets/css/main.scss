@@ -175,3 +175,17 @@ ul {
   list-style: circle;
   padding: 0 1rem 0;
 }
+
+// Page transitions
+.page-enter-active {
+  transition: opacity 500ms ease-in;
+}
+
+.page-leave-active {
+  transition: opacity 250ms ease-out;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}

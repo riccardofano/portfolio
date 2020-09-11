@@ -53,6 +53,13 @@ export default {
       descriptionChallenges: md.render(project.descriptionChallenges),
     }
   },
+  transition(to, from) {
+    if (!from) return 'page'
+    // Only play the transition if the page is from the same locale,
+    // don't play it if the user is just switching languages
+    // because it it just flashes white and looks bad
+    return to.name.slice(-2) === from.name.slice(-2) ? 'page' : 'none'
+  },
 }
 </script>
 
