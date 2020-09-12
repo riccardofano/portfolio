@@ -2,13 +2,15 @@
   <section-wrapper>
     <h2 class="header underline">Galleria Immagini</h2>
     <div class="gallery grid grid--inner">
-      <div
+      <a
         v-for="(image, i) in images"
         :key="i"
         class="picture picture--shadow"
+        :href="image.responsiveImage.src"
+        target="_blank"
       >
         <datocms-image :data="image.responsiveImage"></datocms-image>
-      </div>
+      </a>
     </div>
   </section-wrapper>
 </template>
@@ -31,6 +33,10 @@ export default {
 <style lang="scss" scoped>
 .gallery {
   grid-row-gap: 1rem;
+
+  & .picture {
+    cursor: zoom-in;
+  }
 
   @include for-desktop-up {
     grid-row-gap: 2rem;
