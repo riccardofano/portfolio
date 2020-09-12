@@ -12,7 +12,7 @@
           </datocms-image>
           <nuxt-link
             :to="localePath(`/${project.slug}`)"
-            class="project__btn btn btn--highlight"
+            class="project__btn btn"
           >
             {{ $t('recent.btn') }}
           </nuxt-link>
@@ -26,8 +26,8 @@
               v-for="tag in project.tags"
               :key="tag.text"
               class="project__tag underline"
-              >{{ tag.text }}
-            </span>
+              >{{ tag.text }}</span
+            >
           </div>
           <div
             class="project__description paragraph"
@@ -94,6 +94,12 @@ a {
     z-index: 1;
     align-self: center;
     opacity: 0;
+    background-color: transparent;
+    color: var(--bg-primary);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &__picture {
@@ -128,7 +134,7 @@ a {
     font-size: 0.9rem;
 
     & + & {
-      margin-left: 0.75rem;
+      margin-left: 1rem;
     }
   }
 
