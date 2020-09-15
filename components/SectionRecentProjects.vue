@@ -18,9 +18,11 @@
           </nuxt-link>
         </div>
         <div class="project__info">
-          <nuxt-link :to="localePath(`/${project.slug}`)">
-            <h3 class="project__title">{{ project.title }}</h3>
-          </nuxt-link>
+          <h3 class="project__title">
+            <nuxt-link :to="localePath(`/${project.slug}`)">
+              {{ project.title }}
+            </nuxt-link>
+          </h3>
           <div class="project__tags">
             <span
               v-for="tag in project.tags"
@@ -76,17 +78,16 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-a {
-  text-decoration: none;
-}
-
 .project {
   &__title {
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0.75rem 0;
-    color: var(--clr-text);
-    text-decoration: none;
+
+    & a {
+      text-decoration: none;
+      color: var(--clr-text);
+    }
   }
 
   &__btn {
@@ -128,13 +129,16 @@ a {
 
   &__tags {
     margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__tag {
     font-size: 0.9rem;
+    margin-right: 1rem;
 
-    & + & {
-      margin-left: 1rem;
+    &:last-child {
+      margin-right: 0;
     }
   }
 

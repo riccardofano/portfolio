@@ -164,16 +164,20 @@ html {
   font-size: 1rem;
   font-weight: 400;
 
+  // You can't use scoped style when using v-html
+  // and I need that to use the markdown I get from the cms
+  ul {
+    list-style: circle;
+    padding: 0 1rem 0;
+  }
+
+  a {
+    color: var(--clr-text);
+  }
+
   @include for-tablet-up {
     font-size: 1.125rem;
   }
-}
-
-// You can't use scoped style when using v-html
-// and I need that to use the markdown I get from the cms
-ul {
-  list-style: circle;
-  padding: 0 1rem 0;
 }
 
 // Page transitions
