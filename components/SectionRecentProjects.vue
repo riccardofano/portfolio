@@ -7,16 +7,15 @@
         :key="i"
         class="project grid grid--inner"
       >
-        <div class="project__picture picture picture--shadow">
-          <datocms-image :data="project.imageThumbnail.responsiveImage">
-          </datocms-image>
-          <nuxt-link
-            :to="localePath(`/${project.slug}`)"
-            class="project__btn btn"
-          >
-            {{ $t('recent.btn') }}
-          </nuxt-link>
-        </div>
+        <nuxt-link :to="localePath(`/${project.slug}`)">
+          <div class="project__picture picture picture--shadow">
+            <datocms-image :data="project.imageThumbnail.responsiveImage">
+            </datocms-image>
+            <div class="project__btn btn">
+              {{ $t('recent.btn') }}
+            </div>
+          </div>
+        </nuxt-link>
         <div class="project__info">
           <h3 class="project__title">
             <nuxt-link :to="localePath(`/${project.slug}`)">
@@ -97,10 +96,6 @@ export default {
     opacity: 0;
     background-color: transparent;
     color: var(--bg-primary);
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
   }
 
   &__picture {
