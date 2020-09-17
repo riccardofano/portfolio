@@ -1,7 +1,7 @@
 <template>
   <section-wrapper>
     <h2 class="header underline">Galleria Immagini</h2>
-    <div class="gallery grid grid--inner">
+    <div class="gallery">
       <a
         v-for="(image, i) in images"
         :key="i"
@@ -32,15 +32,20 @@ export default {
 
 <style lang="scss" scoped>
 .gallery {
-  grid-row-gap: 1rem;
+  columns: 1;
+  column-gap: 2rem;
 
   & .picture {
     cursor: zoom-in;
+    margin-bottom: 2rem;
   }
 
-  @include for-desktop-up {
-    grid-row-gap: 2rem;
-    grid-column-gap: 2rem;
+  @include for-tablet-up {
+    columns: 2;
+  }
+
+  @include for-big-desktop-up {
+    columns: 3;
   }
 }
 </style>
