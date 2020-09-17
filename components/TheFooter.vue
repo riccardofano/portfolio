@@ -57,9 +57,9 @@ export default {
 
   &__details {
     font-weight: 600;
-    margin-right: 1rem;
     text-decoration: none;
     color: var(--clr-text);
+    padding: 0.3rem 0;
 
     & span {
       font-weight: 400;

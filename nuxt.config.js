@@ -6,8 +6,8 @@ const md = new MarkdownIt()
 
 const defaultLocale = 'en'
 const locales = [
-  { code: 'en', file: 'en.js' },
-  { code: 'it', file: 'it.js' },
+  { code: 'en', iso: 'en-US', file: 'en.js' },
+  { code: 'it', iso: 'it-IT', file: 'it.js' },
 ]
 
 export default {
@@ -51,14 +51,14 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Riccardo Fano',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: "I'm Riccardo Fano I design and develop web applications.",
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -109,6 +109,7 @@ export default {
       useCookie: true,
       cookieKey: 'i18n_redirect',
     },
+    seo: true,
     lazy: true,
     langDir: 'locales/',
     vueI18n: {

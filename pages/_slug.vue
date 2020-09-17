@@ -60,6 +60,11 @@ export default {
     // because it it just flashes white and looks bad
     return to.name.slice(-2) === from.name.slice(-2) ? 'page' : 'none'
   },
+  head() {
+    return {
+      title: `Portfolio | ${this.title}`,
+    }
+  },
 }
 </script>
 
