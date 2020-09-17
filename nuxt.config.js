@@ -87,7 +87,6 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
@@ -115,6 +114,14 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
     },
+  },
+  /*
+   ** Environmental variables
+   */
+  publicRuntimeConfig: {
+    emailAddress: process.env.EMAIL_ADDRESS,
+    phoneNumber: process.env.PHONE_NUMBER,
+    github: process.env.GITHUB,
   },
   /*
    ** Build configuration
