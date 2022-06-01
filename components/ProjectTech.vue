@@ -7,7 +7,7 @@
       <div class="tech-wrapper">
         <project-vision :description="descriptionVision"></project-vision>
         <div class="tech">
-          <h2 class="header underline">Tecnologie usate</h2>
+          <h2 class="header underline">{{ $t('project.tech') }}</h2>
           <div
             class="tech__description paragraph"
             v-html="descriptionTech"
@@ -39,6 +39,7 @@ export default {
       required: true,
     },
   },
+  data: () => ({}),
 }
 </script>
 

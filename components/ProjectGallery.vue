@@ -1,7 +1,7 @@
 <template>
   <section-wrapper>
     <div>
-      <h2 class="header underline">Galleria Immagini</h2>
+      <h2 class="header underline">{{ $t('project.gallery') }}</h2>
       <div class="gallery">
         <a
           v-for="(image, i) in images"
@@ -29,6 +29,7 @@ export default {
       required: true,
     },
   },
+  data: () => ({}),
 }
 </script>
 
