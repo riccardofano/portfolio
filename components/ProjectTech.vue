@@ -1,22 +1,16 @@
 <template>
-  <section-wrapper background>
+  <section-wrapper>
     <div class="wrapper grid grid--inner column--middle">
       <div class="tech__image">
         <datocms-image :data="image.responsiveImage"></datocms-image>
       </div>
       <div class="tech-wrapper">
+        <project-vision :description="descriptionVision"></project-vision>
         <div class="tech">
           <h2 class="header underline">Tecnologie usate</h2>
           <div
             class="tech__description paragraph"
             v-html="descriptionTech"
-          ></div>
-        </div>
-        <div class="challenges">
-          <h2 class="header underline clallenges__header">Sfide</h2>
-          <div
-            class="challenges__description paragraph"
-            v-html="descriptionChallenges"
           ></div>
         </div>
       </div>
@@ -26,16 +20,17 @@
 
 <script>
 import SectionWrapper from '@/components/SectionWrapper.vue'
+import ProjectVision from '@/components/ProjectVision.vue'
 
 export default {
   name: 'ProjectTech',
-  components: { SectionWrapper },
+  components: { SectionWrapper, ProjectVision },
   props: {
     descriptionTech: {
       type: String,
       required: true,
     },
-    descriptionChallenges: {
+    descriptionVision: {
       type: String,
       required: true,
     },

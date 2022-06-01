@@ -1,16 +1,18 @@
 <template>
   <section-wrapper>
-    <h2 class="header underline">Galleria Immagini</h2>
-    <div class="gallery">
-      <a
-        v-for="(image, i) in images"
-        :key="i"
-        class="picture picture--shadow"
-        :href="image.responsiveImage.src"
-        target="_blank"
-      >
-        <datocms-image :data="image.responsiveImage"></datocms-image>
-      </a>
+    <div>
+      <h2 class="header underline">Galleria Immagini</h2>
+      <div class="gallery">
+        <a
+          v-for="(image, i) in images"
+          :key="i"
+          class="picture picture--shadow"
+          :href="image.responsiveImage.src"
+          target="_blank"
+        >
+          <datocms-image :data="image.responsiveImage"></datocms-image>
+        </a>
+      </div>
     </div>
   </section-wrapper>
 </template>
