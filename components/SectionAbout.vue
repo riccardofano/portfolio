@@ -53,6 +53,10 @@ export default {
     }
   }
 
+  &.grid {
+    gap: 1rem;
+  }
+
   &__description + &__description {
     margin-top: 1rem;
   }
