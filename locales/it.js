@@ -1,7 +1,7 @@
 export default {
   hero: {
-    firstLine: 'Web Developer',
-    secondLine: 'e Designer.',
+    firstLine: 'Front-End',
+    secondLine: 'Web Developer',
     subtitle: 'Sono Riccardo Fano',
     btn: 'Scarica CV',
     btnHighlight: 'Contattami',
