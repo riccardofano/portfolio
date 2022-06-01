@@ -12,7 +12,7 @@
     </h1>
     <div class="hero__links">
       <a class="btn" :href="urlRepo">Github</a>
-      <a class="btn btn--highlight" :href="urlDemo">Versione live</a>
+      <a class="btn btn--highlight" :href="urlDemo">{{ $t('project.demo') }}</a>
     </div>
   </div>
 </template>
@@ -30,6 +30,7 @@ export default {
     urlDemo: { type: String, required: true },
     image: { type: Object, required: true },
   },
+  data: () => ({}),
 }
 </script>
 

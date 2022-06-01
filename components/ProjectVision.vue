@@ -1,6 +1,6 @@
 <template>
   <section-wrapper>
-    <h2 class="header underline">Visione del progetto</h2>
+    <h2 class="header underline">{{ $t('project.vision') }}</h2>
     <div class="vision__description paragraph" v-html="description"></div>
   </section-wrapper>
 </template>
@@ -17,6 +17,7 @@ export default {
       required: true,
     },
   },
+  data: () => ({}),
 }
 </script>
 

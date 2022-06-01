@@ -29,4 +29,10 @@ export default {
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi inventore error temporibus expedita esse sed placeat eligendi. Ipsum, facilis ullam.',
     phone: 'Telefono:',
   },
+  project: {
+    vision: 'Visione del progetto',
+    tech: 'Tecnologie usate',
+    gallery: 'Galleria immagini',
+    demo: 'Versione live',
+  },
 }
