@@ -7,10 +7,9 @@
       :url-demo="urlDemo"
       :image="imageHero"
     ></project-hero>
-    <project-vision :description="descriptionVision"></project-vision>
     <project-tech
       :description-tech="descriptionTech"
-      :description-challenges="descriptionChallenges"
+      :description-vision="descriptionVision"
       :image="imageTech"
     ></project-tech>
     <project-gallery :images="imageGallery"></project-gallery>
@@ -20,7 +19,6 @@
 
 <script>
 import ProjectHero from '@/components/ProjectHero.vue'
-import ProjectVision from '@/components/ProjectVision.vue'
 import ProjectTech from '@/components/ProjectTech.vue'
 import ProjectGallery from '@/components/ProjectGallery.vue'
 import TheFooter from '@/components/TheFooter.vue'
@@ -34,7 +32,6 @@ const md = new MarkdownIt()
 export default {
   components: {
     ProjectHero,
-    ProjectVision,
     ProjectTech,
     ProjectGallery,
     TheFooter,
