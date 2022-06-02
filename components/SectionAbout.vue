@@ -23,10 +23,10 @@ export default {
   name: 'SectionAbout',
   components: { SectionWrapper },
   props: {
-    image: {
-      type: Object,
-      required: true,
-    },
+    // image: {
+    //   type: Object,
+    //   required: true,
+    // },
   },
 }
 </script>

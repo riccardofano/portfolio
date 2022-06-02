@@ -1,8 +1,8 @@
 <template>
   <div class="grid grid--outer">
-    <section-hero></section-hero>
+    <section-hero :cv="upload.url"></section-hero>
     <section-recent-projects :projects="projects"></section-recent-projects>
-    <section-about :image="upload"></section-about>
+    <section-about></section-about>
     <the-footer></the-footer>
   </div>
 </template>
