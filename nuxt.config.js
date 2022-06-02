@@ -4,7 +4,7 @@ import { allProjects } from './lib/queries.js'
 
 const md = new MarkdownIt()
 
-const defaultLocale = 'en'
+const defaultLocale = 'it'
 const locales = [
   { code: 'en', iso: 'en-US', file: 'en.js' },
   { code: 'it', iso: 'it-IT', file: 'it.js' },
@@ -58,7 +58,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: "I'm Riccardo Fano I design and develop web applications.",
+        content: "I'm Riccardo Fano and I develop front-end web applications.",
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -113,7 +113,7 @@ export default {
     lazy: true,
     langDir: 'locales/',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'it',
     },
   },
   /*
