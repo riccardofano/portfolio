@@ -1,5 +1,5 @@
 <template>
-  <section-wrapper background inverted>
+  <section-wrapper id="contact" background inverted>
     <div class="column--middle">
       <h2 class="header underline">{{ $t('contact.title') }}</h2>
       <div class="grid grid--inner">
