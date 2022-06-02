@@ -16,17 +16,17 @@ export default {
   about: {
     title: 'Più su di me',
     shortDesc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum expedita quam! Veritatis blanditiis ex ipsa vel delectus, officia magni?        ',
+      "Sviluppatore Front-End ben versato nell'ecosistema del web, amo imparare ad utilizzare nuovi strumenti e tecnologie che si presentano.",
     subtitle: 'Strumenti e abilità',
     devDesc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa, ullam unde fugiat quam corrupti maiores fugit iure illum dignissimos architecto repudiandae. Fugit culpa alias, id adipisci quisquam expedita! Amet.',
+      "Posseggo un'ottima padronanza dei linguaggi di Javascript e Typescript. Frequentemente usando framework web quali React e VueJs. Ho esperienza nell'utilizzo di database sia relazionali (MySQL, Postgres) che non (MongoDB).",
     desDesc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, neque sequi enim, quaerat est veniam tempore dolore et ad eum quas provident repellat dolorem eveniet?',
+      'Ho molta dimestichezza con strumenti di Version Control quali Git e Github, e contribuisco a progetti Open Source.',
   },
   contact: {
     title: 'Contattami',
     shortDesc:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi inventore error temporibus expedita esse sed placeat eligendi. Ipsum, facilis ullam.',
+      "Un'email è modo migliore con il quale contattarmi, e ricevere una risposta nel tempo più breve possibile!",
     phone: 'Telefono:',
   },
   project: {

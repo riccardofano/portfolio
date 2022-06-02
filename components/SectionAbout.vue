@@ -1,6 +1,6 @@
 <template>
   <section-wrapper>
-    <div class="about grid grid--inner">
+    <div class="about">
       <div class="about__info">
         <h2 class="header underline">{{ $t('about.title') }}</h2>
         <p class="about__description">{{ $t('about.shortDesc') }}</p>
@@ -8,9 +8,10 @@
         <p class="about__description">{{ $t('about.devDesc') }}</p>
         <p class="about__description">{{ $t('about.desDesc') }}</p>
       </div>
-      <div class="about__picture picture">
-        <datocms-image :data="image.responsiveImage"></datocms-image>
+      <!-- <div class="about__picture picture">
+        <datocms-image :data="image.responsiveImage"></datocms-image> //
       </div>
+      -->
     </div>
   </section-wrapper>
 </template>
@@ -22,16 +23,21 @@ export default {
   name: 'SectionAbout',
   components: { SectionWrapper },
   props: {
-    image: {
-      type: Object,
-      required: true,
-    },
+    // image: {
+    //   type: Object,
+    //   required: true,
+    // },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .about {
+  max-width: 60ch;
+  // TODO: remove this when picture is re-enabled
+  margin-left: auto;
+  margin-right: auto;
+
   &__picture {
     justify-self: center;
   }
@@ -51,6 +57,10 @@ export default {
     @include for-tablet-up {
       font-size: 1.25rem;
     }
+  }
+
+  &.grid {
+    gap: 1rem;
   }
 
   &__description + &__description {

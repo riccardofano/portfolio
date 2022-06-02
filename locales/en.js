@@ -16,17 +16,17 @@ export default {
   about: {
     title: 'More about me',
     shortDesc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum expedita quam! Veritatis blanditiis ex ipsa vel delectus, officia magni?        ',
+      'Front-End developer well versed in the web ecosystem, I love learning to utilize new tools and technologies that might arise.',
     subtitle: 'Tools and abilities',
     devDesc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa, ullam unde fugiat quam corrupti maiores fugit iure illum dignissimos architecto repudiandae. Fugit culpa alias, id adipisci quisquam expedita! Amet.',
+      "I have experience working on programming languages such as Javascript and Typescript. Frequently using web Frameworks like React and VueJs. I've worked with multiple types of database from relational (MySQL, Postgres) to NoSQL ones (MongoDB).",
     desDesc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, neque sequi enim, quaerat est veniam tempore dolore et ad eum quas provident repellat dolorem eveniet?',
+      "I'm very familiar with working with Version Control systems such as Git and Github and I've contributed to Open Source projects.",
   },
   contact: {
     title: 'Contact me',
     shortDesc:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi inventore error temporibus expedita esse sed placeat eligendi. Ipsum, facilis ullam.',
+      'An email is the best way to contact me, I try to respond as fast as I possibly can!',
     phone: 'Phone:',
   },
   project: {

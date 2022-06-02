@@ -9,7 +9,7 @@
       </h1>
     </div>
     <div class="hero__links">
-      <a class="btn">{{ $t('hero.btn') }}</a>
+      <a :href="cv" target="_blank" class="btn">{{ $t('hero.btn') }}</a>
       <a :href="`mailto:${emailAddress}`" class="btn btn--highlight">
         {{ $t('hero.btnHighlight') }}
       </a>
@@ -23,6 +23,7 @@ import TheNavbar from '@/components/TheNavbar'
 export default {
   name: 'SectionHero',
   components: { TheNavbar },
+  props: { cv: { type: String, required: true } },
   data: () => ({
     emailAddress: process.env.EMAIL_ADDRESS,
   }),
