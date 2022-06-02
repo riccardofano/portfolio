@@ -10,7 +10,7 @@
     </div>
     <div class="hero__links">
       <a :href="cv" target="_blank" class="btn">{{ $t('hero.btn') }}</a>
-      <a :href="`mailto:${emailAddress}`" class="btn btn--highlight">
+      <a href="#contact" class="btn btn--highlight">
         {{ $t('hero.btnHighlight') }}
       </a>
     </div>
